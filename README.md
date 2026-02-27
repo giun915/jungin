@@ -1,5 +1,37 @@
-# Vue 3 + TypeScript + Vite
+# Web Portfolio
 
-This template should help get you started developing with Vue 3 and TypeScript in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+기존에 제작했던 퍼블리싱 결과물을 기반으로, 개인 학습 및 구조 개선을 목적으로 Vue 3로 재구성한 포트폴리오 프로젝트입니다.
+실제 클라이언트 사이트의 원본 소스나 데이터는 사용하지 않았으며, 동일한 UI 구조를 참고하여 별도의 리팩토링 프로젝트로 다시 구현하였습니다.
 
-Learn more about the recommended Project Setup and IDE Support in the [Vue Docs TypeScript Guide](https://vuejs.org/guide/typescript/overview.html#project-setup).
+## Overview
+
+* 기존 HTML/CSS 기반 퍼블리싱 프로젝트를 Vue 3로 전환
+* 다중 페이지 구조를 단일 SPA 구조로 마이그레이션
+* 컴포넌트 단위 레이아웃 설계 (Header / Footer / Section)
+* 하드코딩 마크업을 데이터 기반 렌더링으로 개선
+* Swiper 기반 섹션 네비게이션 구현
+* 커스텀 마우스 휠 제어 로직 구현
+
+## Tech Stack
+
+* HTML5 / CSS3
+* JavaScript (ES6+)
+* Vue 3 (Composition API)
+* TypeScript
+* Vite
+* Vue Router
+* Swiper
+
+## Project Progress
+
+* [✓] 기존 퍼블리싱 구조 분석
+* [✓] Vue 컴포넌트 구조 설계
+* [✓] 레이아웃(Header / Footer) 마이그레이션
+* [✓] 메인 섹션 SPA 구조 구현
+* [✓] 인터랙션 로직 Vue 방식으로 전환
+
+## Notes
+
+* 본 프로젝트는 실제 운영 사이트의 소스를 공개한 것이 아닌, 개인 포트폴리오를 위한 리팩토링 구현입니다.
+* 원본 사이트의 상호 및 일부 정보는 비식별화 처리되었습니다.
+* 커밋 히스토리를 통해 점진적인 구조 개선 과정을 확인할 수 있습니다.
