@@ -3,8 +3,6 @@
     /* 🔔 메인 포인트 색상 */
     --main-color: #22d3ee;
 
-    --main-rgb-color: 34 211 238;
-
     /* 🔔 서브 포인트 색상 */
     --secondary-color: #a855f7;
 
@@ -15,7 +13,7 @@
     --quaternary-color: #facc15;
 
     /* 🔔 기본 색상 (제목) */
-    --basic-color: #ffffff;
+    --basic-color: #1a1a1a;
         
     /* 🔔 기본 색상 (제목 제외) */
     --sub-basic-color: #0a0a0a;
@@ -30,7 +28,7 @@
     --box-bg-color: #1a1a1a;
 
     /* 🔔 border color */
-    --border-color: #1f2937;;
+    --border-color: #e8e8e8;;
 
     /* 🔔 그림자 색 */
     --box-shadow-light-color: #d1d1d1;
