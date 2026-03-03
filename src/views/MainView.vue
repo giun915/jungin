@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import AppHeader from '@/components/layout/AppHeader.vue'
-import HeroBanner from '@/components/common/HeroBanner.vue';
-import { heroSlides } from '@/constants/heroSlides'
+import HeroBanner from '@/components/hero/HeroBanner.vue';
+import { heroSlides } from '@/constants/hero/heroSlides'
 </script>
 
 <template>

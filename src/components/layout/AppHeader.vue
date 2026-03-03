@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import IconEmail from '@/components/icons/common/IconEmail.vue'
 import IconPhone from '@/components/icons/common/IconPhone.vue'
-import { snsLinks, gnbItems } from '@/constants/headerData'
+import { snsLinks, gnbItems } from '@/constants/layout/headerData'
 </script>
 
 <template>
