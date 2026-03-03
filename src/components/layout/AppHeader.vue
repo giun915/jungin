@@ -11,7 +11,7 @@ import IconPhone from '@/components/icons/common/IconPhone.vue'
         <ul class="sns_wrap">
           <li class="sns">
             <a href="https://open.kakao.com/o/sJl2Bn4e" target="_blank" rel="noopener noreferrer">
-              <img src="/imgs/common/kakao.png" alt="카카오톡 로고" />
+              <img src="/imgs/icons/kakao.png" alt="카카오톡 로고" />
             </a>
           </li>
           <li class="sns">
@@ -20,12 +20,12 @@ import IconPhone from '@/components/icons/common/IconPhone.vue'
               target="_blank"
               rel="noopener noreferrer"
             >
-              <img src="/imgs/common/insta.png" alt="인스타그램 로고" />
+              <img src="/imgs/icons/insta.png" alt="인스타그램 로고" />
             </a>
           </li>
           <li class="sns">
             <a href="#" target="_blank" rel="noopener noreferrer">
-              <img src="/imgs/common/blog.jpg" alt="블로그 로고" />
+              <img src="/imgs/icons/blog.jpg" alt="블로그 로고" />
             </a>
           </li>
         </ul>
@@ -50,7 +50,7 @@ import IconPhone from '@/components/icons/common/IconPhone.vue'
       <div class="page_inner">
         <h2 class="logo">
           <a href="/">
-            <img src="/imgs/common/logo.png" alt="로고" />
+            <img src="/imgs/logo/logo.png" alt="로고" />
           </a>
         </h2>
 
