@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import { ref } from 'vue'
 import IconEmail from '@/components/icons/common/IconEmail.vue'
 import IconPhone from '@/components/icons/common/IconPhone.vue'
 </script>

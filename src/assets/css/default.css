@@ -1,16 +1,9 @@
 :root {
-    
     /* 🔔 메인 포인트 색상 */
-    --main-color: #22d3ee;
+    --main-color: #f8b126;
 
     /* 🔔 서브 포인트 색상 */
     --secondary-color: #a855f7;
-
-    /* 🔔 3번째 포인트 색상 */
-    --tertiary-color: #f472b6;
-
-    /* 🔔 4번째 포인트 색상 */
-    --quaternary-color: #facc15;
 
     /* 🔔 기본 색상 (제목) */
     --basic-color: #1a1a1a;
@@ -31,6 +24,6 @@
     --border-color: #e8e8e8;;
 
     /* 🔔 그림자 색 */
-    --box-shadow-light-color: #d1d1d1;
+    --shadow-color: #000;
 
 }
