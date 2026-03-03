@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import IconEmail from '@/components/icons/common/IconEmail.vue'
 import IconPhone from '@/components/icons/common/IconPhone.vue'
+import { snsLinks, gnbItems } from '@/constants/headerData'
 </script>
 
 <template>
@@ -9,24 +10,8 @@ import IconPhone from '@/components/icons/common/IconPhone.vue'
     <div class="header_top">
       <div class="page_inner">
         <ul class="sns_wrap">
-          <li class="sns">
-            <a href="https://open.kakao.com/o/sJl2Bn4e" target="_blank" rel="noopener noreferrer">
-              <img src="/imgs/icons/kakao.png" alt="카카오톡 로고" />
-            </a>
-          </li>
-          <li class="sns">
-            <a
-              href="https://www.instagram.com/yigiun?igsh=MTVqb3ppeGFxcGRoMA=="
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <img src="/imgs/icons/insta.png" alt="인스타그램 로고" />
-            </a>
-          </li>
-          <li class="sns">
-            <a href="#" target="_blank" rel="noopener noreferrer">
-              <img src="/imgs/icons/blog.jpg" alt="블로그 로고" />
-            </a>
+          <li v-for="sns in snsLinks" :key="sns.id" class="sns">
+            <img :src="sns.icon" :alt="sns.alt">
           </li>
         </ul>
 
@@ -55,10 +40,9 @@ import IconPhone from '@/components/icons/common/IconPhone.vue'
         </h2>
 
         <ul class="gnb_wrap">
-          <li class="gnb"><a href="/">MAIN</a></li>
-          <li class="gnb"><a href="/#about">ABOUT</a></li>
-          <li class="gnb"><a href="/#portfolio">PORTFOLIO</a></li>
-          <li class="gnb gnb4"><a href="/#footer">CONTACT</a></li>
+          <li v-for="item in gnbItems" :key="item.id" class="gnb">
+            <a :href="item.href">{{ item.label }}</a>
+          </li>
         </ul>
       </div>
     </div>
