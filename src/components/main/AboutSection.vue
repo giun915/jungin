@@ -17,17 +17,3 @@ import AboutProcess from './about/AboutProcess.vue';
         <AboutProcess :steps="processSteps" />
     </section>
 </template>
-
-<style scoped>
-#about {
-    display: flex;
-    flex-direction: column;
-    gap: 4rem;
-    margin-top: 2rem;
-}
-
-.page_inner {
-    flex-direction: column;
-    gap: 4rem;
-}
-</style>

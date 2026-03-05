@@ -13,3 +13,16 @@ svg {
   padding: 0 1.5rem;
   box-sizing: border-box;
 }
+
+#about, #portfolio {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+    margin-top: 2rem;
+}
+
+#about .page_inner,
+#portfolio .page_inner {
+    flex-direction: column;
+    gap: 4rem;
+}
