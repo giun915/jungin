@@ -2,10 +2,6 @@
 #app {
   width: 100%;
 }
-svg {
-  height: 1em;
-}
-
 .page_inner {
   display: flex;
   width: 1000px;
