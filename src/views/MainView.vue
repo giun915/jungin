@@ -5,6 +5,7 @@ import { heroSlides } from '@/constants/hero/heroSlides'
 import AboutSection from '@/components/main/AboutSection.vue';
 import PortfolioSection from '@/components/main/PortfolioSection.vue';
 import AppFooter from '@/components/layout/AppFooter.vue';
+import BackToTopButton from '@/components/common/BackToTopButton.vue';
 </script>
 
 <template>
@@ -15,6 +16,7 @@ import AppFooter from '@/components/layout/AppFooter.vue';
         <PortfolioSection/>
     </main>
     <AppFooter />
+    <BackToTopButton />
 </template>
 
 <style scoped>
