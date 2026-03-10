@@ -4,17 +4,10 @@ import { Pagination, Navigation, Autoplay, EffectFade } from 'swiper/modules'
 
 import 'swiper/swiper-bundle.css'
 
-type HeroSlide = {
-    id: number
-    image: string
-    title: string
-    desc: string[]
-    href: string
-    cta: string
-}
+import type { PortfolioCategoryPageData } from '@/constants/portfolio/portfolioData'
 
 const props = defineProps<{
-    slides: HeroSlide[]
+  slides: PortfolioCategoryPageData[]
 }>()
 
 </script>
@@ -31,24 +24,24 @@ const props = defineProps<{
             :loop="props.slides.length > 1"
             :pagination="{el: '.swiper-pagination', clickable: true }"
             :autoplay="props.slides.length > 1 
-                ? {delay: 5000, disableOnInteraction: false}
+                ? {delay: 500000, disableOnInteraction: false}
                 :false"
             :navigation = "{nextEl: '.swiper-button-next', prevEl: '.swiper-button-prev'}"
             effect="fade"
             :fade-effect="{crossFade: true}"
         >
-            <SwiperSlide v-for="slide in props.slides" :key="slide.id" class="swiper-slide">
-                <img :src="slide.image" :alt="slide.title" />
+            <SwiperSlide v-for="slide in props.slides" :key="slide.key" class="swiper-slide">
+                <img :src="slide.cardImage" :alt="slide.cardAlt" />
                 <div class="slide_content">
-                    <h5> {{ slide.title }}</h5>
+                    <h5> {{ slide.cardTitle }}</h5>
                     <p class="main_txt">
                         <p v-for="(line, i) in slide.desc" :key="i">
                             {{ line }}
                         </p>
                     </p>
-                    <a v-if="slide.href && slide.cta" :href="slide.href">
-                        {{ slide.cta }}
-                    </a>
+                    <RouterLink :to="`/${slide.key}`">
+                        VIEW PORTFOLIO
+                    </RouterLink>
                 </div>
             </SwiperSlide>
         </Swiper>
@@ -70,8 +63,19 @@ const props = defineProps<{
     text-align: center;
 }
 
+.swiper-slide:before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.25);
+    z-index: 2;
+}
+
 img {
     position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 .slide_content {
@@ -79,6 +83,7 @@ img {
     gap: 3.5rem;
     flex-direction: column;
     align-items: center;
+    z-index: 2;
 }
 
 .slide_content * {
