@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import HeroBanner from '@/components/hero/HeroBanner.vue';
+import MainHeroBanner from '@/components/hero/MainHeroBanner.vue';
 import { heroSlides } from '@/constants/hero/heroSlides'
 import AboutSection from '@/components/main/AboutSection.vue';
 import PortfolioSection from '@/components/main/PortfolioSection.vue';
@@ -7,7 +7,7 @@ import PortfolioSection from '@/components/main/PortfolioSection.vue';
 
 <template>
     <main>
-        <HeroBanner :slides="heroSlides"/>
+        <MainHeroBanner :slides="heroSlides"/>
         <AboutSection/>
         <PortfolioSection/>
     </main>

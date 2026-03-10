@@ -1,5 +1,6 @@
 <script setup lang="ts">
-import { portfolioIntro, portfolioCategories } from '@/constants/main/portfolioData'
+import { portfolioIntro } from '@/constants/main/portfolioData'
+import { portfolioCategories } from '@/constants/portfolio/portfolioData';
 import SectionBoundry from '../common/SectionBoundry.vue';
 </script>
 
@@ -17,7 +18,7 @@ import SectionBoundry from '../common/SectionBoundry.vue';
             </p>
             <ul class="pf_list">
                 <li v-for="(item, index) in portfolioCategories" :key="item.key" class="pf">
-                    <RouterLink :to="`/portfolio/${item.key}`">
+                    <RouterLink :to="`/${item.key}`">
                         <img :src="item.cardImage" :alt="item.cardAlt">
                         <div class="content">
                             <h5 class="title">{{ item.cardTitle }}</h5>
