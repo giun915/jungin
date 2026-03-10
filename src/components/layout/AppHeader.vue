@@ -11,7 +11,14 @@ import { snsLinks, gnbItems } from '@/constants/layout/headerData'
       <div class="page_inner">
         <ul class="sns_wrap">
           <li v-for="sns in snsLinks" :key="sns.id" class="sns">
-            <img :src="sns.icon" :alt="sns.alt">
+            <a
+              :href="sns.href"
+              target="_blank"
+              rel="noopener"
+              :aria-label="sns.alt"
+            >
+              <img :src="sns.icon" :alt="sns.alt">
+            </a>
           </li>
         </ul>
 
