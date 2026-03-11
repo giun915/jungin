@@ -1,6 +1,7 @@
 import { createRouter, createWebHistory, type RouteRecordRaw } from 'vue-router'
 import MainView from '@/views/MainView.vue'
 import PortfolioCategoryView from '@/views/portfolio/PortfolioCategoryView.vue'
+import PortfolioDetailView from '@/views/portfolio/PortfolioDetailView.vue'
 
 const routes: RouteRecordRaw[] = [
   { path: '/', name: 'main', component: MainView },
@@ -9,6 +10,11 @@ const routes: RouteRecordRaw[] = [
     name: 'portfolio-category',
     component: PortfolioCategoryView,
   },
+  {
+    path: '/:category/:slug',
+    name: 'portfolio-detail',
+    component: PortfolioDetailView,
+  }
 ]
 
 const router = createRouter({
