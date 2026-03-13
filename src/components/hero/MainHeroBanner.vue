@@ -19,12 +19,11 @@ const props = defineProps<{
         <Swiper
             class="hero_swiper"
             :modules="[Navigation, Pagination, Autoplay, EffectFade ]"
-            :slides-per-view= "1"
             :speed = "1000"
-            :loop="props.slides.length > 1"
+            :rewind="props.slides.length > 1"
             :pagination="{el: '.swiper-pagination', clickable: true }"
             :autoplay="props.slides.length > 1 
-                ? {delay: 5000, disableOnInteraction: false}
+                ? {delay: 500000, disableOnInteraction: false}
                 :false"
             :navigation = "{nextEl: '.swiper-button-next', prevEl: '.swiper-button-prev'}"
             effect="fade"
@@ -35,9 +34,10 @@ const props = defineProps<{
                 <div class="slide_content">
                     <h5> {{ slide.cardTitle }}</h5>
                     <p class="main_txt">
-                        <p v-for="(line, i) in slide.desc" :key="i">
+                        <template v-for="(line, i) in slide.desc" :key="i">
                             {{ line }}
-                        </p>
+                            <br v-if="i !== slide.desc.length - 1">
+                        </template>
                     </p>
                     <RouterLink :to="`/${slide.key}`">
                         VIEW PORTFOLIO
@@ -99,6 +99,7 @@ h5 {
     display: flex;
     flex-direction: column;
     gap: 1rem;
+    line-height: 1.5;
 } 
 
 p {
