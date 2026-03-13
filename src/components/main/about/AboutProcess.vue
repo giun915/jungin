@@ -8,7 +8,6 @@ defineProps<{
 
 <template>
     <div class="process_wrap">
-        <img src="/imgs/main/process_back.jpg" alt="프로세스 배경이미지">
         <div class="step_area">
             <div class="page_inner">
                 <ul class="step_wrap">
@@ -30,15 +29,18 @@ defineProps<{
 <style scoped>
 .process_wrap {
     position: relative;
+    background: 
+    linear-gradient(rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.15)),
+    url('/imgs/main/process_back.jpg') center / cover no-repeat;
 }
 
 .step_area {
-    position: absolute;
     display: flex;
     align-items: center;
     top: 0;
     width: 100%;
     height: 100%;
+    padding: 3rem 0;
 }
 
 .step_wrap {
@@ -125,5 +127,114 @@ p::after {
 
 .process_wrap .step:nth-child(8)::after {
   content: none;
+}
+
+@media (max-width: 1024px) {
+  .step_wrap {
+    --gap-x: 2rem;
+    --gap-y: 2rem;
+
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, auto);
+    margin: 0 auto;
+  }
+
+  .step {
+    aspect-ratio: 210 / 130;
+  }
+
+  /* 기존 PC 배치 초기화 후 태블릿 배치 재설정 */
+  .process_wrap .step:nth-child(4) { grid-column: 3; grid-row: 2; }
+  .process_wrap .step:nth-child(5) { grid-column: 2; }
+  .process_wrap .step:nth-child(6) { grid-column: 1; grid-row: 2; }
+  .process_wrap .step:nth-child(7) { grid-column: 1; }
+
+  /* 3 ↓ 4 */
+  .process_wrap .step:nth-child(3)::after {
+    top: 100%;
+    left: 50%;
+    width: 1px;
+    height: var(--gap-y);
+  }
+
+  /* 4 → 5 → 6 (오른쪽에서 왼쪽으로 이어짐) */
+  .process_wrap .step:nth-child(4)::after,
+  .process_wrap .step:nth-child(5)::after {
+    left: initial;
+    top: 50%;
+    right: 100%;
+    width: var(--gap-x);
+    height: 1px;
+  }
+
+  /* 6 ↓ 7 */
+  .process_wrap .step:nth-child(6)::after {
+    top: 100%;
+    left: 50%;
+    width: 1px;
+    height: var(--gap-y);
+  }
+
+  /* 7 → 8 */
+  .process_wrap .step:nth-child(7)::after {
+    left: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .step_wrap {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(4, auto);
+  }
+
+  .step p {
+    font-size: 0.875rem;
+  }
+
+  .process_wrap .step:nth-child(3) { grid-column: 2; grid-row: 2; }
+  .process_wrap .step:nth-child(4) { grid-column: 1; }
+  .process_wrap .step:nth-child(5) { grid-column: 1; grid-row: 3; }
+  .process_wrap .step:nth-child(6) { grid-column: 2; grid-row: 3; }
+  .process_wrap .step:nth-child(7) { grid-column: 2; grid-row: 4; }
+  .process_wrap .step:nth-child(8) { grid-column: 1; grid-row: 4; }
+
+  .process_wrap .step:nth-child(2)::after {
+    top: 100%;
+    left: 50%;
+    width: 1px;
+    height: var(--gap-y);
+  }
+
+  .process_wrap .step:nth-child(3)::after {
+    top: 50%;
+    right: 100%;
+    left: initial;
+    width: var(--gap-x);
+    height: 1px;
+  }
+
+  .process_wrap .step:nth-child(4)::after {
+    top: 100%;
+    left: 50%;
+    width: 1px;
+    height: var(--gap-y);
+  }
+
+  .process_wrap .step:nth-child(5)::after {
+    left: 100%;
+    height: 1px;
+  }
+
+  /* 7 ← 8 */
+  .process_wrap .step:nth-child(7)::after {
+    left: initial;
+  }
+}
+
+@media (max-width: 500px) {
+  .step_wrap {
+    --gap-x: 1.5rem;
+    --gap-y: 1.5rem;
+  }
 }
 </style>

@@ -14,18 +14,24 @@
     display: flex;
     flex-direction: column;
     gap: 4rem;
-    margin-top: 2rem;
+    margin-top: 3rem;
 }
 
 #about .page_inner,
 #portfolio .page_inner {
     flex-direction: column;
-    gap: 4rem;
+    gap: 3rem;
 }
 
 /* 반응형 */
 @media (max-width: 1024px) {
   .page_inner {
     width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  #about, #portfolio  {
+    gap: 2.5rem;
   }
 }

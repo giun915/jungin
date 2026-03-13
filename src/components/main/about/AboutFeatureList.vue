@@ -23,4 +23,11 @@ defineProps<{
     display: flex;
     gap: 1.25rem;
 }
+
+@media (max-width: 768px) {
+  .icon_box_wrap {
+    flex-direction: column;
+    gap: 2rem;
+  }
+}
 </style>

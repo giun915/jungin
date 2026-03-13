@@ -81,6 +81,7 @@ const iconMap = {
         margin-top: 1.5rem;
         font-size: 1rem;
         line-height: 1.75rem;
+        word-break: keep-all;
     }
 
     .icon_box1 .icon_txt  {
@@ -99,5 +100,29 @@ const iconMap = {
         font-size: 1.125rem;
         font-weight: 700;
         vertical-align: baseline;
+    }
+
+    /* 반응형 */
+    @media (max-width: 768px) {
+
+        svg {
+            width: 2rem;
+            height: 2rem;
+        }
+
+        .box_txt {
+            font-size: 1rem;
+            line-height: 1.25rem;
+        }
+
+        .icon_txt {
+            margin-top: 0.5rem;
+            font-size: 0.875rem;
+            line-height: 1.5rem;
+        }
+
+        .icon_txt span {
+            font-size: 1rem;
+        }
     }
 </style>

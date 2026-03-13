@@ -18,5 +18,20 @@ defineProps<{
     text-align: center;
     font-size: 1.125rem;
     line-height: 2rem;
+    word-break: keep-all;
+}
+
+@media (max-width: 768px) {
+    .section_txt {
+        font-size: 1rem;
+        line-height: 1.75rem;
+    }
+}
+
+@media (max-width: 500px) {
+    .section_txt {
+        font-size: 0.875rem;
+        line-height: 1.75rem;
+    }
 }
 </style>
