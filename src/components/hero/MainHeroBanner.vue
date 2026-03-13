@@ -23,7 +23,7 @@ const props = defineProps<{
             :rewind="props.slides.length > 1"
             :pagination="{el: '.swiper-pagination', clickable: true }"
             :autoplay="props.slides.length > 1 
-                ? {delay: 500000, disableOnInteraction: false}
+                ? {delay: 5000, disableOnInteraction: false}
                 :false"
             :navigation = "{nextEl: '.swiper-button-next', prevEl: '.swiper-button-prev'}"
             effect="fade"
