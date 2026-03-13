@@ -18,19 +18,19 @@
     gap: 1rem;
 }
 
-.section_boundry .line {
+.line {
   flex: 1;
   height: 1px;
   background: #333;
   max-width: 7.5rem;
 }
 
-.section_boundry .dots {
+.dots {
   display: flex;
   gap: 0.625rem;
 }
 
-.section_boundry .dot {
+.dot {
   width: 0.75rem;
   height: 0.75rem;
   border: 0.25rem solid #c5c5c5;
@@ -38,15 +38,28 @@
   background: transparent;
 }
 
-.section_boundry .green {
+.green {
   border-color: #acb693;
 }
 
-.section_boundry .yellow {
+.yellow {
   border-color: #e7a930;
 }
 
-.section_boundry .brown {
+.brown {
   border-color: #b19c87;
+}
+
+@media (max-width: 768px) {
+  .dot {
+    width: 0.75rem;
+    height: 0.75rem;
+  }
+}
+
+@media (max-width: 500px) {
+  .line {
+    max-width: 5.5rem;
+  }
 }
 </style>
