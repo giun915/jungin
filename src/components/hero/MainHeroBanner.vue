@@ -24,7 +24,7 @@ const props = defineProps<{
             :loop="props.slides.length > 1"
             :pagination="{el: '.swiper-pagination', clickable: true }"
             :autoplay="props.slides.length > 1 
-                ? {delay: 500000, disableOnInteraction: false}
+                ? {delay: 5000, disableOnInteraction: false}
                 :false"
             :navigation = "{nextEl: '.swiper-button-next', prevEl: '.swiper-button-prev'}"
             effect="fade"
@@ -67,7 +67,7 @@ const props = defineProps<{
     content: "";
     position: absolute;
     inset: 0;
-    background: rgba(0, 0, 0, 0.25);
+    background: rgba(0, 0, 0, 0.35);
     z-index: 2;
 }
 
@@ -103,14 +103,14 @@ h5 {
 
 p {
     font-size: 2rem;
-    font-weight: 300;
+    font-weight: 500;
     text-shadow: 0 0 0.75rem var(--shadow-color);
 }
 
 a {
     display: inline-block;
     font-size: 1rem;
-    font-weight: 200;
+    font-weight: 500;
     border: 2px solid #fff;
     border-radius: 9999px;
     padding: 0.875rem 1.5rem;
@@ -144,5 +144,55 @@ a {
 
 .swiper-button-next {
     right: 3.125rem;
+}
+
+@media (max-width: 1024px) {
+    h5 {
+        font-size: 3.5rem;
+    }
+
+    p {
+        font-size: 1.875rem;
+    }
+
+    .slider_arrow {
+        display: none;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero_swiper {
+        height: 55vh;
+    }
+    h5 {
+        font-size: 2.875rem;
+    }
+
+    p {
+        font-size: 1.5rem;
+    }
+
+    a {
+        font-size: 0.875rem;
+        padding: 0.75rem 1.25rem;
+    }
+}
+
+@media (max-width: 500px) {
+    .slide_content {
+        gap: 2.5rem;
+    }
+
+    h5 {
+        font-size: 2.25rem;
+    }
+
+    p {
+        font-size: 1.25rem;
+    }
+
+    a {
+        font-size: 0.75rem;
+    }
 }
 </style>
