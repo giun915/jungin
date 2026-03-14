@@ -40,7 +40,7 @@ onBeforeUnmount(() => {
 <style scoped>
 .button_back_top {
     position: fixed;
-    bottom: 5rem;
+    bottom: 3rem;
     right: calc((100vw - 1000px) / 2 - 5rem);
     width: 2.5rem;
     height: 2.5rem;
@@ -54,6 +54,13 @@ svg {
     width: 0.75rem;
     color: var(--main-color);
     transform: rotate(-90deg);
+}
+
+/* 반응형 */
+@media (max-width: 1200px) {
+  .button_back_top {
+    right: 1rem;
+  }
 }
 
 </style>
