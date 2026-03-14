@@ -184,6 +184,7 @@ const closeMobileMenu = () => {
 
   #mHeader {
     display: block;
+    z-index: 4;
   }
 
   .page_inner {
