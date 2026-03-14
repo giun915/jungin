@@ -47,6 +47,8 @@ import { footerContactList } from '@/constants/layout/footerData'
     color: #adadad;
     text-align: center;
     gap: 1rem;
+    padding: 0 0.25rem;
+    word-break: keep-all;
 }
 
 svg {
@@ -65,5 +67,20 @@ svg {
     padding: 1rem 0;
     border-top: 1px solid #777;
     color: #fff;
+}
+
+@media (max-width: 768px) {
+    .info_list {
+            grid-template-columns: repeat(3, 1fr);
+    }
+
+    svg {
+        width: 1.75rem;
+        height: 1.75rem;
+    }
+    .txt {
+        font-size: 0.875rem;
+        line-height: 1.25rem;
+    }
 }
 </style>
