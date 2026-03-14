@@ -84,4 +84,34 @@ span {
     flex-direction: column;
     gap: 2rem;
 }
+
+/* 반응형 */
+@media (max-width: 1024px) {
+    .page_inner {
+        flex-direction: column;
+        padding: 0.75rem;
+    }
+
+    .section_boundry {
+        display: none;
+    }
+}
+
+@media (max-width: 768px) {
+    .page_inner {
+        gap: 1rem;
+    }
+
+    span {
+        font-size: 2.25rem;
+    }
+
+    h2 {
+        font-size: 1.375rem;
+    }
+
+    .image_list {
+        gap: 1.5rem;
+    }
+}
 </style>
