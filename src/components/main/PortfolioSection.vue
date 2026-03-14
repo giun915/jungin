@@ -60,7 +60,7 @@ import SectionBoundry from '../common/SectionBoundry.vue';
     display: flex;
     flex: 1;
     border: 0.75rem solid #333;
-    height: 30rem;
+    aspect-ratio: 113 / 126;
     overflow: hidden;
 }
 
@@ -89,6 +89,7 @@ img {
     visibility: hidden;
     opacity: 0;
     background: rgba(0, 0, 0, 0.8);
+    padding: 0 0.75rem;
 }
 
 a:hover .content {
@@ -107,11 +108,53 @@ h5 {
 }
 
 button {
-    margin-top: 5rem;
+    margin-top: 2.5rem;
     padding: 0.25rem 1.5rem;
     color: var(--main-color);
     border: 2px solid var(--main-color);
     border-radius: 9999px;
     font-size: 1.125rem;
+}
+
+
+@media (max-width: 768px) {
+    .icon_txt[data-v-b641616f] {
+        margin-top: 0.5rem;
+        font-size: 0.875rem;
+        line-height: 1.5rem;
+    }
+
+    .section_txt {
+        font-size: 0.875rem;
+        line-height: 1.5rem;
+    }
+
+    .section_txt span {
+        font-size: 1rem;
+    }
+
+    .pf_list {
+        gap: 1rem;
+        flex-direction: column;
+    }
+
+    .pf {
+        aspect-ratio: 100 / 85;
+    }
+
+    h5 {
+        font-size: 2rem;
+    }
+
+    .content p {
+        font-size: 1rem;
+        line-height: 1.5rem;
+    }
+
+    button {
+        margin-top: 1rem;
+        font-size: 0.875rem;
+        border-width: 1px;
+    }
 }
 </style>
