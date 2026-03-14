@@ -124,4 +124,24 @@ button {
     margin-bottom: 1rem;
 }
 
+/* 반응형 */
+@media (max-width: 1024px) {
+  .page_inner {
+    flex-direction: column;
+    padding: 0.75rem;
+  }
+}
+
+@media (max-width: 768px) {
+    .page_inner {
+        gap: 1rem;
+    }
+    
+    .item_list {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0.5rem
+    }
+}
+
+
 </style>

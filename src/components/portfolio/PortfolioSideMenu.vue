@@ -39,10 +39,16 @@ p {
 }
 
 .side_menu_list {
+    display: flex;
+    flex-direction: column;
     margin-top: 0.25rem;
 }
 
 li {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 85%;
     margin: 0 auto;
     font-size: 1rem;
@@ -53,4 +59,35 @@ li {
 .menu_sel a {
     color: var(--main-color);
 }
+
+/* 반응형 */
+@media (max-width: 1024px) {
+  .side_menu_wrap {
+    width: 100%;
+  }
+
+  .side_menu_list {
+    flex-direction: row;
+    margin-top: 0.75rem;
+  }
+
+  li {
+    border-bottom: none;
+  }
+
+  li:after {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 1px;
+    height: 1.5rem;
+    background-color: var(--main-color);
+    right: 0;
+  }
+
+  li:last-child:after {
+    content: none;
+  }
+}
+
 </style>

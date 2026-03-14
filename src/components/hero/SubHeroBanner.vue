@@ -40,7 +40,6 @@ defineProps<Props>()
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 25rem;
 }
 
 .sub_hero_banner:before {
@@ -69,6 +68,7 @@ img {
     text-align: center;
     color: #fff;
     z-index: 3;
+    margin: 2.5rem 0;
 }
 
 .txt_wrap {
@@ -107,5 +107,20 @@ h4 {
 .desc {
     font-size: 1rem;
     line-height: 1.5rem;
+}
+
+@media (max-width: 768px) {
+    .banner_badge {
+        width: 18rem;
+        height: 18rem;
+    }
+
+    h4 {
+        font-size: 1.5rem;
+    }
+
+    .label {
+        font-size: 1.125rem;
+    }
 }
 </style>
