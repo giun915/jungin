@@ -9,6 +9,8 @@ const isMobileMenuOpen = ref(false)
 const toggleMobileMenu = () => {
   isMobileMenuOpen.value = !isMobileMenuOpen.value
 }
+
+const baseUrl = import.meta.env.BASE_URL
 </script>
 
 <template>
@@ -48,8 +50,8 @@ const toggleMobileMenu = () => {
     <div class="header_bottom">
       <div class="page_inner">
         <h2 class="logo">
-          <a :href="import.meta.env.BASE_URL">
-            <img :src="`${import.meta.env.BASE_URL}imgs/logo/logo.png`" alt="로고" />
+          <a :href="baseUrl">
+            <img :src="`${baseUrl}imgs/logo/logo.png`" alt="로고">
           </a>
         </h2>
         <ul class="gnb_wrap">
@@ -60,7 +62,8 @@ const toggleMobileMenu = () => {
       </div>
     </div>
   </header>
-  <!-- PC HEADER -->
+
+  <!-- MOBILE HEADER -->
   <header id="mHeader">
     <div class="page_inner">
       <div class="content_wrap">
@@ -77,8 +80,8 @@ const toggleMobileMenu = () => {
           </li>
         </ul>
         <h2 class="logo">
-          <a :href="import.meta.env.BASE_URL">
-            <img :src="`${import.meta.env.BASE_URL}imgs/logo/logo.png`" alt="로고" />
+          <a :href="baseUrl">
+            <img :src="`${baseUrl}imgs/logo/logo.png`" alt="로고">
           </a>
         </h2>
         <button
