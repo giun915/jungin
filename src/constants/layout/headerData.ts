@@ -33,8 +33,8 @@ export const snsLinks: SnsLink[] = [
 ]
 
 export const gnbItems: NavItem[] = [
-  { id: 'main', label: 'MAIN', href: '/' },
-  { id: 'about', label: 'ABOUT', href: '/#about' },
-  { id: 'portfolio', label: 'PORTFOLIO', href: '/#portfolio' },
-  { id: 'contact', label: 'CONTACT', href: '/#footer' },
+  { id: 'main', label: 'MAIN', href: `${import.meta.env.BASE_URL}` },
+  { id: 'about', label: 'ABOUT', href: `${import.meta.env.BASE_URL}#about` },
+  { id: 'portfolio', label: 'PORTFOLIO', href: `${import.meta.env.BASE_URL}#portfolio` },
+  { id: 'contact', label: 'CONTACT', href: `${import.meta.env.BASE_URL}#footer` },
 ]

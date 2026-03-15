@@ -48,8 +48,8 @@ const toggleMobileMenu = () => {
     <div class="header_bottom">
       <div class="page_inner">
         <h2 class="logo">
-          <a href="/">
-            <img src="/imgs/logo/logo.png" alt="로고" />
+          <a :href="import.meta.env.BASE_URL">
+            <img :src="`${import.meta.env.BASE_URL}imgs/logo/logo.png`" alt="로고" />
           </a>
         </h2>
 
@@ -78,8 +78,8 @@ const toggleMobileMenu = () => {
           </li>
         </ul>
         <h2 class="logo">
-          <a href="/">
-            <img src="/imgs/logo/logo.png" alt="로고" />
+          <a :href="import.meta.env.BASE_URL">
+            <img :src="`${import.meta.env.BASE_URL}imgs/logo/logo.png`" alt="로고" />
           </a>
         </h2>
         <button
