@@ -17,7 +17,7 @@ import SectionBoundry from '../common/SectionBoundry.vue';
                 </template>
             </p>
             <ul class="pf_list">
-                <li v-for="(item, index) in portfolioCategories" :key="item.key" class="pf">
+                <li v-for="item in portfolioCategories" :key="item.key" class="pf">
                     <RouterLink :to="`/${item.key}`">
                         <img :src="item.cardImage" :alt="item.cardAlt">
                         <div class="content">

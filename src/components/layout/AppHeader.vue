@@ -9,10 +9,6 @@ const isMobileMenuOpen = ref(false)
 const toggleMobileMenu = () => {
   isMobileMenuOpen.value = !isMobileMenuOpen.value
 }
-
-const closeMobileMenu = () => {
-  isMobileMenuOpen.value = false
-}
 </script>
 
 <template>
