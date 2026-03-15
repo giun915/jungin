@@ -48,11 +48,10 @@ const toggleMobileMenu = () => {
     <div class="header_bottom">
       <div class="page_inner">
         <h2 class="logo">
-          <a href="/">
-            <img src="/imgs/logo/logo.png" alt="로고" />
+          <a :href="import.meta.env.BASE_URL">
+            <img :src="`${import.meta.env.BASE_URL}imgs/logo/logo.png`" alt="로고" />
           </a>
         </h2>
-
         <ul class="gnb_wrap">
           <li v-for="item in gnbItems" :key="item.id" class="gnb">
             <a :href="item.href">{{ item.label }}</a>
@@ -78,8 +77,8 @@ const toggleMobileMenu = () => {
           </li>
         </ul>
         <h2 class="logo">
-          <a href="/">
-            <img src="/imgs/logo/logo.png" alt="로고" />
+          <a :href="import.meta.env.BASE_URL">
+            <img :src="`${import.meta.env.BASE_URL}imgs/logo/logo.png`" alt="로고" />
           </a>
         </h2>
         <button
