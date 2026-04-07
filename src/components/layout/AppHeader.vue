@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { ref } from 'vue'
+import { RouterLink } from 'vue-router'
 import IconEmail from '@/components/icons/common/IconEmail.vue'
 import IconPhone from '@/components/icons/common/IconPhone.vue'
 import { snsLinks, gnbItems } from '@/constants/layout/headerData'
@@ -8,6 +9,10 @@ const isMobileMenuOpen = ref(false)
 
 const toggleMobileMenu = () => {
   isMobileMenuOpen.value = !isMobileMenuOpen.value
+}
+
+const closeMobileMenu = () => {
+  isMobileMenuOpen.value = false
 }
 
 const baseUrl = import.meta.env.BASE_URL
@@ -34,7 +39,7 @@ const baseUrl = import.meta.env.BASE_URL
         <ul class="contact_wrap">
           <li class="contact">
             <i>
-                <IconEmail class="contact_icon" />
+              <IconEmail class="contact_icon" />
             </i>
             <p class="txt">giun915@gmail.com</p>
           </li>
@@ -50,13 +55,13 @@ const baseUrl = import.meta.env.BASE_URL
     <div class="header_bottom">
       <div class="page_inner">
         <h2 class="logo">
-          <a :href="baseUrl">
+          <RouterLink to="/">
             <img :src="`${baseUrl}imgs/logo/logo.png`" alt="로고">
-          </a>
+          </RouterLink>
         </h2>
         <ul class="gnb_wrap">
           <li v-for="item in gnbItems" :key="item.id" class="gnb">
-            <a :href="item.href">{{ item.label }}</a>
+            <RouterLink :to="item.to">{{ item.label }}</RouterLink>
           </li>
         </ul>
       </div>
@@ -79,11 +84,13 @@ const baseUrl = import.meta.env.BASE_URL
             </a>
           </li>
         </ul>
+
         <h2 class="logo">
-          <a :href="baseUrl">
+          <RouterLink to="/" @click="closeMobileMenu">
             <img :src="`${baseUrl}imgs/logo/logo.png`" alt="로고">
-          </a>
+          </RouterLink>
         </h2>
+
         <button
           type="button"
           class="menu_btn"
@@ -96,9 +103,12 @@ const baseUrl = import.meta.env.BASE_URL
           <span></span>
         </button>
       </div>
+
       <ul class="gnb_wrap" :class="{ on: isMobileMenuOpen }">
         <li v-for="item in gnbItems" :key="item.id" class="gnb">
-          <a :href="item.href">{{ item.label }}</a>
+          <RouterLink :to="item.to" @click="closeMobileMenu">
+            {{ item.label }}
+          </RouterLink>
         </li>
       </ul>
     </div>
