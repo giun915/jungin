@@ -1,18 +1,23 @@
 export type SnsLink = {
-    id: "kakao" | "insta" | "blog"
-    href: string
-    icon: string
-    alt: string
+  id: 'kakao' | 'insta' | 'blog'
+  href: string
+  icon: string
+  alt: string
 }
 
 export type NavItem = {
-    id: string
-    label: string
-    href: string
+  id: string
+  label: string
+  to:
+    | string
+    | {
+        path: string
+        hash?: string
+      }
 }
 
 export const snsLinks: SnsLink[] = [
-    {
+  {
     id: 'kakao',
     href: 'https://open.kakao.com/o/sJl2Bn4e',
     icon: `${import.meta.env.BASE_URL}imgs/icons/kakao.png`,
@@ -33,8 +38,8 @@ export const snsLinks: SnsLink[] = [
 ]
 
 export const gnbItems: NavItem[] = [
-  { id: 'main', label: 'MAIN', href: `${import.meta.env.BASE_URL}` },
-  { id: 'about', label: 'ABOUT', href: `${import.meta.env.BASE_URL}#about` },
-  { id: 'portfolio', label: 'PORTFOLIO', href: `${import.meta.env.BASE_URL}#portfolio` },
-  { id: 'contact', label: 'CONTACT', href: `${import.meta.env.BASE_URL}#footer` },
+  { id: 'main', label: 'MAIN', to: '/' },
+  { id: 'about', label: 'ABOUT', to: { path: '/', hash: '#about' } },
+  { id: 'portfolio', label: 'PORTFOLIO', to: { path: '/', hash: '#portfolio' } },
+  { id: 'contact', label: 'CONTACT', to: { path: '/', hash: '#footer' } },
 ]
